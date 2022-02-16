@@ -19,6 +19,7 @@ function Doctor(props) {
             <h2 className='title'>Познакомьтесь с нашими специалистами</h2>
             <div className={style.subtitle}>Скачайте приложение «МедОК Онлайн», и они будут на связи, чтобы помочь Вам именно тогда, когда это важно</div>
             <div className={style.block}>
+                {doctorElements}
             </div>
         </div>
     );

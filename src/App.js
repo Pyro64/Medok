@@ -22,7 +22,7 @@ function App(props) {
                <Route path="/contacts"
                   element={<Contacts />} />
                <Route path="/benefit"
-                  element={<Benefit />} />
+                  element={<Benefit blogData={props.state.blogData} />} />
             </Routes>
             <Subscribe />
             <Footer />
