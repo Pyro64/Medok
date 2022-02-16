@@ -4,6 +4,7 @@ import img3 from "../images/Doctor/3.png"
 import img4 from "../images/Doctor/4.png"
 import img5 from "../images/Doctor/5.png"
 import img6 from "../images/Doctor/6.png"
+
 let state = {
     doctorData: [
         {
@@ -45,7 +46,7 @@ let state = {
             text: "Lorem Ipsum is simply dummy text of the printing and typesetting",
             timetable: "sun - fri @ 10.00am to 4.00pm",
             img: img5,
-            
+
         },
         {
             id: 6,
@@ -54,6 +55,98 @@ let state = {
             text: "Lorem Ipsum is simply dummy text of the printing and typesetting",
             timetable: "Mon - Sat @ 9.00pm to 12.00am",
             img: img6,
+        },
+    ],
+    blogData: [
+        {
+            id: 1,
+            img: img,
+            title: "Anxiety disorder affects human life very badly",
+            text: "Nurologiest",
+            avatar: "ava",
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            subscribe: "44 read"
+        },
+        {
+            id: 1,
+            img: img,
+            title: "Anxiety disorder affects human life very badly",
+            text: "Nurologiest",
+            avatar: "ava",
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            subscribe: "44 read"
+        },
+        {
+            id: 1,
+            img: img,
+            title: "Anxiety disorder affects human life very badly",
+            text: "Nurologiest",
+            avatar: "ava",
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            subscribe: "44 read"
+        },
+        {
+            id: 1,
+            img: img,
+            title: "Anxiety disorder affects human life very badly",
+            text: "Nurologiest",
+            avatar: "ava",
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            subscribe: "44 read"
+        },
+        {
+            id: 1,
+            img: img,
+            title: "Anxiety disorder affects human life very badly",
+            text: "Nurologiest",
+            avatar: "ava",
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            subscribe: "44 read"
+        },
+        {
+            id: 1,
+            img: img,
+            title: "Anxiety disorder affects human life very badly",
+            text: "Nurologiest",
+            avatar: "ava",
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            subscribe: "44 read"
+        },
+        {
+            id: 1,
+            img: img,
+            title: "Anxiety disorder affects human life very badly",
+            text: "Nurologiest",
+            avatar: "ava",
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            subscribe: "44 read"
+        },
+        {
+            id: 1,
+            img: img,
+            title: "Anxiety disorder affects human life very badly",
+            text: "Nurologiest",
+            avatar: "ava",
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            subscribe: "44 read"
+        },
+        {
+            id: 1,
+            img: img,
+            title: "Anxiety disorder affects human life very badly",
+            text: "Nurologiest",
+            avatar: "ava",
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            subscribe: "44 read"
         },
     ],
 };

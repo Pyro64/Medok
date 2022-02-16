@@ -10,9 +10,7 @@ function DoctorItem(props) {
             </div>
             <div className={style.item}>
                 <div className={style.timetable}>{props.timetable}</div>
-                <a href="#" className="btn">
-                    View Profile
-                </a>
+                <a href="#" className="btn">View Profile </a>
             </div>
         </div>
     );

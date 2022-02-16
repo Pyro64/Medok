@@ -4,6 +4,8 @@
   position: fixed;
   width: 100%;
   transition: 0.38s ease-in-out;
+  z-index: 2;
+  top: 0;
 }
 .scroll {
   position: fixed;
@@ -11,7 +13,7 @@
   background: rgba(245, 250, 255, 0.75);
   backdrop-filter: blur(12px);
   transition: 0.38s ease-in-out;
-  z-index: 1;
+  z-index: 2;
 }
 .inner {
   display: flex;

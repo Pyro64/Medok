@@ -1,0 +1,17 @@
+@import '../../Style/Mixins.scss';
+
+.container {
+    background-image: url('../../images/background-title.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 140px;
+    @include fluid(padding-top, 30px, 55px);
+    @include fluid(padding-bottom, 30px, 50px);
+}
+.text {
+    color: #343940;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    @include fluid(font-size, 18px, 20px);
+}

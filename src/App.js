@@ -5,6 +5,8 @@ import Home from "./Components/Home/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import AboutProject from "./Components/AboutProject/AboutProject";
+import Benefit from "./Components/Benefit/Benefit";
+import Subscribe from "./Components/Subscribe/Subscribe";
 function App(props) {
    return (
       <BrowserRouter>
@@ -19,7 +21,10 @@ function App(props) {
                   element={<AboutProject />} />
                <Route path="/contacts"
                   element={<Contacts />} />
+               <Route path="/benefit"
+                  element={<Benefit />} />
             </Routes>
+            <Subscribe />
             <Footer />
          </div>
       </BrowserRouter>

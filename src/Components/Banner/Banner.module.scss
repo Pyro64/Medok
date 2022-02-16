@@ -1,13 +1,21 @@
-@import "../../../Style/Mixins";
+@import '../../Style/Mixins';
 
 .wrapper {
-  background-image: url("../../../images/Banner.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100vh;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
-
+.img {
+  object-fit: contain;
+  object-position: right;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
 .title {
   color: $blue;
   @include fluid(margin-bottom, 10px, 20px);
@@ -17,11 +25,8 @@
 .text {
   color: #001430;
   font-weight: bold;
-  @include fluid(font-size, 36px, 50px);
-}
-
-.text span {
-  display: block;
+  @include fluid(font-size, 36px, 44px);
+  width: 50%;
 }
 
 .item {
