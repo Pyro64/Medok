@@ -1,0 +1,40 @@
+@import '../../Style/Mixins.scss';
+
+.container {
+  @include container;
+  @include fluid(padding-top, 50px, 100px);
+  @include fluid(padding-bottom, 50px, 100px);
+  h4 {
+    color: #001430;
+    font-weight: bold;
+    text-transform: capitalize;
+    @include fluid(font-size, 16px, 20px);
+    @include fluid(margin-bottom, 10px, 20px);
+  }
+  p {
+    color: $blue;
+    @include fluid(font-size, 14px, 16px);
+    @include fluid(line-height, 18px, 26px);
+  }
+}
+.wrapper {
+  @include fluid(margin-bottom, 30px, 60px);
+}
+.textCenter {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+.block {
+  display: flex;
+  justify-content: space-between;
+}
+.item {
+  width: 30%;
+}
+.svg {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  @include fluid(margin-bottom, 15px, 25px);
+}

@@ -1,0 +1,56 @@
+@import '../../Style/Mixins.scss';
+
+.wrapper {
+    background-image: url('../../images/worldBanner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container {
+    @include container;
+    @include fluid(padding-top, 50px, 100px);
+    @include fluid(padding-bottom, 50px, 100px);
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include fluid(margin-top, 20px, 40px);
+    input {
+        font-family: 'Montserrat';
+        width: 50%;
+        border: 1px solid $yelow;
+        border-radius: 10px;
+        outline: none;
+        transition: 0.38s ease-in-out;
+        background-color: rgba(0, 0, 0, 0);
+        @include fluid(font-size, 14px, 16px);
+        @include fluid(padding-top, 10px, 15px);
+        @include fluid(padding-bottom, 10px, 15px);
+        @include fluid(padding-left, 30px, 40px);
+        @include fluid(padding-right, 30px, 40px);
+        @include fluid(margin-bottom, 20px, 40px);
+        &:focus-visible {
+            border-color: $orange;
+        }
+    }
+    textarea {
+        font-family: 'Montserrat';
+        width: 50%;
+        min-height: 150px;
+        border: 1px solid $yelow;
+        border-radius: 10px;
+        transition: 0.38s ease-in-out;
+        outline: none;
+        resize: none;
+        background-color: rgba(0, 0, 0, 0);
+        @include fluid(font-size, 14px, 16px);
+        @include fluid(padding-top, 10px, 15px);
+        @include fluid(padding-bottom, 10px, 15px);
+        @include fluid(padding-left, 30px, 40px);
+        @include fluid(padding-right, 30px, 40px);
+        @include fluid(margin-bottom, -20px, -30px);
+        &:focus-visible {
+            border-color: $orange;
+        }
+    }
+}

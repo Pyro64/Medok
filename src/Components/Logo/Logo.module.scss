@@ -1,0 +1,11 @@
+@import "../../Style/Mixins.scss";
+
+.logo {
+  display: block;
+  background-image: url('../../images/logo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include fluid(width, 140px, 180px);
+  @include fluid(height, 80px, 100px);
+
+}

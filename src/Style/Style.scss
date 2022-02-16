@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import '../Style/Mixins';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat';
+  background: #f5faff;
+  color: #333333;
+  height: 100%;
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.fixed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  @include container;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.title {
+  color: #001430;
+  font-weight: bold;
+  text-align: center;
+  @include fluid(font-size, 24px, 40px);
+  @include fluid(margin-bottom, 10px, 15px);
+}
+.btn {
+  display: block;
+  border-radius: 30px;
+  color: #fff;
+  transition: 0.38s ease-in-out;
+  background: linear-gradient(to right, $yelow, $orange);
+  box-shadow: 0 4px 15px 0 rgba(196, 71, 49, 0.75);
+  background-size: 200% 100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+  @include fluid(padding-left, 20px, 40px);
+  @include fluid(padding-right, 20px, 40px);
+  &:hover {
+    background-position: 100% 0;
+  }
+}
+.nav {
+  &__link {
+    color: #333;
+    font-weight: 500;
+    transition: 0.38s ease-in-out;
+    @include fluid(font-size, 14px, 18px);
+    @include fluid(margin-right, 25px, 50px);
+    &:hover {
+      color: $yelow;
+    }
+    &.active {
+      color: $yelow;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

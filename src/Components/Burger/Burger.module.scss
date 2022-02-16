@@ -1,0 +1,62 @@
+@import "../../Style/Mixins.scss";
+
+.burger {
+  display: none;
+  position: absolute;
+  width: 21px;
+  height: 19px;
+  cursor: pointer;
+  z-index: 2;
+  right: 0;
+  top: 50%;
+  transform: translateY(-40%);
+
+  &:hover {
+    .icon {
+      background: $orange;
+
+      &::before {
+        background:$orange;
+      }
+
+      &::after {
+        background: $orange;
+      }
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 3px;
+  transform: rotate(0deg);
+  transition: all .3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    border-radius: 3px;
+    top: 7px;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transition: all .3s ease-in-out;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    border-radius: 3px;
+    top: 14px;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transition: all .3s ease-in-out;
+  }
+}

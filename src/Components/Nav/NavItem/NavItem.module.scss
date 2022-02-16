@@ -1,0 +1,16 @@
+@import "../../../Style/Mixins.scss";
+
+.link {
+  color: #333;
+  font-weight: 500;
+  transition: .38s ease-in-out;
+  @include fluid(font-size, 14px, 18px);
+  @include fluid(margin-right, 25px, 50px);
+  &:hover {
+    color: $yelow;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

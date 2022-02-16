@@ -1,0 +1,15 @@
+@import '../../../Style/Mixins.scss';
+
+.link {
+    display: block;
+    color: #fff;
+    width: fit-content;
+    transition: 0.38s ease-in-out;
+    @include fluid(margin-bottom, 10px, 15px);
+    &:hover {
+        color: $yelow;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

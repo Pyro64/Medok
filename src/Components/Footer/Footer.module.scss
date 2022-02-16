@@ -1,0 +1,35 @@
+@import '../../Style/Mixins.scss';
+
+.wrapper {
+    background: #001430;
+}
+.container {
+    @include container;
+    @include fluid(padding-top, 35px, 70px);
+    @include fluid(padding-bottom, 35px, 70px);
+}
+.title {
+    color: #e0e0e0;
+    font-weight: 700;
+    text-transform: capitalize;
+    @include fluid(font-size, 16px, 20px);
+    @include fluid(margin-bottom, 15px, 30px);
+}
+.block {
+    display: flex;
+    justify-content: space-between;
+}
+.item {
+    &:last-child {
+        width: 10%;
+        text-align: right;
+        a {
+            color: $orange;
+            font-weight: 700;
+            margin-left: auto;
+            &:hover {
+                padding-right: 5px;
+            }
+        }
+    }
+}

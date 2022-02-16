@@ -1,0 +1,33 @@
+@import "../../../Style/Mixins";
+
+.wrapper {
+  background-image: url("../../../images/Banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.title {
+  color: $blue;
+  @include fluid(margin-bottom, 10px, 20px);
+  @include fluid(font-size, 14px, 20px);
+}
+
+.text {
+  color: #001430;
+  font-weight: bold;
+  @include fluid(font-size, 36px, 50px);
+}
+
+.text span {
+  display: block;
+}
+
+.item {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}

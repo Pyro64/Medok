@@ -1,0 +1,47 @@
+@import '../../Style/Mixins.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include container;
+    @include fluid(padding-top, 30px, 60px);
+    @include fluid(padding-bottom, 30px, 60px);
+}
+.title {
+    color: #001430;
+    font-weight: 700;
+    @include fluid(font-size, 24px, 30px);
+    @include fluid(margin-bottom, 10px, 15px);
+}
+.subtitle {
+    color: #001430;
+    font-weight: 700;
+    @include fluid(font-size, 14px, 16px);
+}
+.form {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    input {
+        font-family: 'Montserrat';
+        display: block;
+        border-radius: 30px;
+        transition: 0.38s ease-in-out;
+        box-shadow: 0 4px 15px 0 $yelow;
+        background-size: 300% 100%;
+        outline: none;
+        border: none;
+        flex-grow: 1;
+        transition: 0.38s ease-in-out;
+        @include fluid(font-size, 14px, 16px);
+        @include fluid(padding-top, 10px, 20px);
+        @include fluid(padding-bottom, 10px, 20px);
+        @include fluid(padding-left, 20px, 40px);
+        @include fluid(padding-right, 20px, 40px);
+        margin-right: 20px;
+        &:focus-visible {
+            box-shadow: 0 4px 15px 0 $orange;
+        }
+    }
+}

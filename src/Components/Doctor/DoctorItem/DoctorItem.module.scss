@@ -1,0 +1,62 @@
+@import '../../../Style/Mixins.scss';
+
+.container {
+    width: 30%;
+    margin-right: 5%;
+    box-shadow: 5px 10px rgba(255, 99, 92, 0.1);
+    border: 1px solid rgba(255, 99, 92, 0.1);
+    border-radius: 20px;
+
+    @include fluid(margin-bottom, 15px, 30px);
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+.block {
+    text-align: center;
+    @include fluid(padding, 15px, 30px);
+    h4 {
+        color: #001430;
+        font-weight: 700;
+        @include fluid(font-size, 16px, 20px);
+    }
+    h5 {
+        color: #26aef9;
+        font-weight: normal;
+        @include fluid(font-size, 14px, 18px);
+        @include fluid(margin-bottom, 5px, 10px);
+    }
+    p {
+        color: #001430;
+    }
+}
+.item {
+    @include fluid(padding, 10px, 20px);
+    border-top: 2px solid #d5ebfd;
+    text-align: center;
+}
+.timetable {
+    color: #26aef9;
+    font-weight: 700;
+    @include fluid(font-size, 16px, 18px);
+    @include fluid(margin-bottom, 10px, 20px);
+}
+.link {
+    display: block;
+    border-radius: 30px;
+    color: #fff;
+    transition: 0.38s ease-in-out;
+    background: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+    background-size: 300% 100%;
+    @include fluid(padding, 10px, 20px);
+    &:hover {
+        background-position: 100% 0;
+    }
+}
+.img {
+    @include fluid(padding-bottom, 15px, 35px);
+    @include fluid(height, 130px, 230px);
+    @include fluid(width, 130px, 230px);
+    object-fit: contain;
+}

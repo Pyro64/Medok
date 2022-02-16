@@ -1,0 +1,17 @@
+@import '../../Style/Mixins.scss';
+
+.container {
+    @include container;
+    @include fluid(padding-top, 50px, 100px);
+    @include fluid(padding-bottom, 50px, 100px);
+}
+.subtitle {
+    text-align: center;
+    color: $blue;
+    @include fluid(font-size, 14px, 16px);
+}
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    @include fluid(margin-top, 30px, 60px);
+}
