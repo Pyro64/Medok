@@ -1,5 +1,8 @@
-@import "../../Style/Mixins.scss";
+@import '../../Style/Mixins.scss';
 
 .contacts {
-
+}
+.block {
+    @include container;
+    display: flex;
 }

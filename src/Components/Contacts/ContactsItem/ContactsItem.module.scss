@@ -1,0 +1,36 @@
+@import '../../../Style/Mixins.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin-right: 5%;
+    border-radius: 10px;
+    box-shadow: 5px 10px rgba(255, 99, 92, 0.1);
+    border: 1px solid rgba(255, 99, 92, 0.1);
+    background: #f5faff;
+    @include fluid(min-height, 180px, 270px);
+    &:last-child {
+        margin-right: 0;
+    }
+    a {
+        color: $yellow;
+        transition: 0.38s ease-in-out;
+        @include fluid(margin-bottom, 10px, 15px);
+        &:hover {
+            color: $orange;
+        }
+    }
+    p {
+        color: $black;
+        @include fluid(margin-bottom, 10px, 15px);
+    }
+}
+.svg {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    @include fluid(margin-bottom, 10px, 15px);
+}

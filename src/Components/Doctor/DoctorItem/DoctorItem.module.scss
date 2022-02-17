@@ -1,12 +1,13 @@
 @import '../../../Style/Mixins.scss';
 
 .container {
+    display: flex;
+    flex-direction: column;
     width: 30%;
     margin-right: 5%;
     box-shadow: 5px 10px rgba(255, 99, 92, 0.1);
     border: 1px solid rgba(255, 99, 92, 0.1);
     border-radius: 20px;
-
     @include fluid(margin-bottom, 15px, 30px);
     &:nth-child(3n) {
         margin-right: 0;
@@ -14,9 +15,10 @@
 }
 .block {
     text-align: center;
+    flex-grow: 1;
     @include fluid(padding, 15px, 30px);
     h4 {
-        color: #001430;
+        color: $black;
         font-weight: 700;
         @include fluid(font-size, 16px, 20px);
     }
@@ -27,7 +29,7 @@
         @include fluid(margin-bottom, 5px, 10px);
     }
     p {
-        color: #001430;
+        color: $black;
     }
 }
 .item {

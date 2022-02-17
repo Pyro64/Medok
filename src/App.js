@@ -8,6 +8,7 @@ import AboutProject from "./Components/AboutProject/AboutProject";
 import Benefit from "./Components/Benefit/Benefit";
 import Subscribe from "./Components/Subscribe/Subscribe";
 function App(props) {
+
    return (
       <BrowserRouter>
          <div className="App">
@@ -19,10 +20,12 @@ function App(props) {
                />
                <Route path="/project"
                   element={<AboutProject />} />
-               <Route path="/contacts"
-                  element={<Contacts />} />
                <Route path="/benefit"
                   element={<Benefit blogData={props.state.blogData} />} />
+               <Route path="/contacts"
+                  element={<Contacts
+                     coordinates={props.state.coordinates}
+                     contactsData={props.state.contactsData} />} />
             </Routes>
             <Subscribe />
             <Footer />

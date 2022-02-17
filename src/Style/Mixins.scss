@@ -11,17 +11,16 @@ $container-md: 720px;
 $container-sm: 540px;
 
 $p: 15px;
-$yelow: #ff9322;
+$yellow: #ff9322;
 $orange: #ff615f;
-$blue:#004a94;
-
+$blue: #004a94;
+$black: #333;
 @mixin container {
     width: 100%;
     max-width: $container-lg;
     padding-left: $p;
     padding-right: $p;
     margin: auto;
-    
 
     @media screen and (max-width: $breakpoint-lg) {
         max-width: $container-md;
@@ -36,9 +35,8 @@ $blue:#004a94;
     }
 }
 
-
 @function strip-unit($number) {
-    @if type-of($number)=='number' and not unitless($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
         @return $number / ($number * 0 + 1);
     }
     @return $number;
@@ -49,12 +47,11 @@ $blue:#004a94;
     $f-max: strip-unit($f-max);
     $w-min: strip-unit($w-min);
     $w-max: strip-unit($w-max);
-    $k: ($f-max - $f-min)/($w-max - $w-min);
+    $k: ($f-max - $f-min)/ ($w-max - $w-min);
     $b: $f-min - $k * $w-min;
     $b: $b + $units;
-    @return calc( #{$k} * 100vw + #{$b});
+    @return calc(#{$k} * 100vw + #{$b});
 }
-
 
 @mixin fluid($property, $f-min, $f-max, $w-min: $breakpoint-to-fluid, $w-max: $base-vw, $fallback: false) {
     #{$property}: $f-min;
@@ -68,4 +65,3 @@ $blue:#004a94;
         #{$property}: $f-max;
     }
 }
-

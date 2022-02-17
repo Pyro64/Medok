@@ -54,7 +54,7 @@ textarea:focus::-webkit-input-placeholder {
   border-radius: 30px;
   color: #fff;
   transition: 0.38s ease-in-out;
-  background: linear-gradient(to right, $yelow, $orange);
+  background: linear-gradient(to right, $yellow, $orange);
   box-shadow: 0 4px 15px 0 rgba(196, 71, 49, 0.75);
   background-size: 200% 100%;
   outline: none;
@@ -77,10 +77,10 @@ textarea:focus::-webkit-input-placeholder {
     @include fluid(font-size, 14px, 18px);
     @include fluid(margin-right, 25px, 50px);
     &:hover {
-      color: $yelow;
+      color: $yellow;
     }
     &.active {
-      color: $yelow;
+      color: $yellow;
     }
     &:last-child {
       margin-right: 0;

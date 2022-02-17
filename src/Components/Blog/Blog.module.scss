@@ -1,6 +1,8 @@
 @import '../../Style/Mixins.scss';
 
 .container {
+    display: flex;
+    flex-wrap: wrap;
     @include container;
     @include fluid(padding-top, 50px, 100px);
     @include fluid(padding-bottom, 50px, 100px);

@@ -1,0 +1,10 @@
+@import '../../../Style/Mixins.scss';
+
+.container {
+    @include container;
+    display: flex;
+    @include fluid(margin-top, 50px, 100px);
+    @include fluid(margin-bottom, -50px, -100px);
+    position: relative;
+    z-index: 3;
+}

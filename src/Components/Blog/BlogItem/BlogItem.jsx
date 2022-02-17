@@ -4,16 +4,20 @@ import style from "./BlogItem.module.scss";
 const Blogitem = (props) => {
     return (
         <div className={style.container}>
-            <a href="#" className={style.block}>
-                <img src={props.img} alt="" className={style.img} />
+            <div className={style.block}>
+                <a href="#" className={style.link}>
+                    <img src={props.img} alt="" className={style.img} />
+                </a>
                 <h2>{props.title}</h2>
                 <p> {props.text}</p>
-            </a>
+            </div>
             <div className={style.item}>
-                <img src={props.avatar} alt="" className={style.avatar} />
+                <div className={style.profile}>
+                    <img src={props.avatar} alt="" className={style.avatar} />
+                    <a href="#" className={style.name}>{props.name}</a>
+                </div>
                 <div className={style.wrapper}>
-                    <div className={style.name}>{props.name}</div>
-                    <div className={style.date}>{props.date}</div>
+                    <div className={style.time}>{props.time}</div>
                     <div className={style.read}>{props.read}</div>
                 </div>
             </div>

@@ -1,13 +1,13 @@
-@import "../../../Style/Mixins.scss";
+@import '../../../Style/Mixins.scss';
 
 .link {
   color: #333;
   font-weight: 500;
-  transition: .38s ease-in-out;
+  transition: 0.38s ease-in-out;
   @include fluid(font-size, 14px, 18px);
   @include fluid(margin-right, 25px, 50px);
   &:hover {
-    color: $yelow;
+    color: $yellow;
   }
 
   &:last-child {
