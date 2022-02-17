@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import state from "../src/State/state"
+import state, { medokMap } from "../src/State/state"
 
 ReactDOM.render(
   <React.StrictMode>
     <App
+      medokMap={medokMap}
       state={state} />
   </React.StrictMode>,
   document.getElementById("root")

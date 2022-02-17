@@ -11,7 +11,7 @@ function Contacts(props) {
             <Title text="Контакты" />
             <ContactsLink contactsData={props.contactsData} />
             <MyMap
-                coordinates={props.coordinates}
+                medokMap={props.medokMap}
             />
             <Form />
         </div>

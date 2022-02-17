@@ -24,7 +24,7 @@ function App(props) {
                   element={<Benefit blogData={props.state.blogData} />} />
                <Route path="/contacts"
                   element={<Contacts
-                     coordinates={props.state.coordinates}
+                     medokMap={props.medokMap}
                      contactsData={props.state.contactsData} />} />
             </Routes>
             <Subscribe />
