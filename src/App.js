@@ -27,7 +27,7 @@ function App(props) {
                      medokMap={props.medokMap}
                      contactsData={props.state.contactsData} />} />
             </Routes>
-            <Subscribe />
+            <Subscribe addEmail={props.addEmail} />
             <Footer />
          </div>
       </BrowserRouter>

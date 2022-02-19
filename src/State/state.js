@@ -192,7 +192,20 @@ let state = {
             isLink: true,
         },
     ],
+    emailData: [
+        {
+            email: 'test'
+        },
+    ]
 };
+
+export let addEmail = (emailValue) => {
+    let newEmail = {
+        email: emailValue
+    }
+    state.emailData.push(newEmail)
+    console.log(state.emailData)
+}
 
 export let medokMap = {
     center: [51.536342356116286, 46.02227590785803],
