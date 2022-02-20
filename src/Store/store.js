@@ -211,6 +211,7 @@ let store = {
     getMedokMap() {
         return this._medokMap
     },
+
     addEmail(emailValue) {
         let newEmail = {
             email: emailValue

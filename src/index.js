@@ -10,7 +10,7 @@ import store from "./Store/store"
 ReactDOM.render(
   <React.StrictMode>
     <App
-      addEmail={store.addEmail}
+      addEmail={store.addEmail.bind(store)}
       medokMap={store.getMedokMap()}
       state={store.getState()} />
   </React.StrictMode>,
