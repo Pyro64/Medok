@@ -3,7 +3,6 @@ import WhatIsTelemed from "../WhatIsTelemed/WhatIsTelemed";
 import DowloandApp from "../DowloandApp/DowloandApp";
 import Doctor from "../Doctor/Doctor";
 import Form from "../Form/Form";
-import Subscribe from "../Subscribe/Subscribe";
 import imgBanner from '../../images/Banner-home.jpg';
 
 function Home(props) {

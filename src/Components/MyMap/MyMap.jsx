@@ -2,7 +2,6 @@ import { YMaps, Map, Placemark, ZoomControl } from "react-yandex-maps";
 import React from 'react';
 import style from './MyMap.module.scss'
 const MyMap = (props) => {
-
     return (
         <div className={style.container}>
             <YMaps>

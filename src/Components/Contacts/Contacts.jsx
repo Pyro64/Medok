@@ -5,7 +5,6 @@ import MyMap from '../MyMap/MyMap';
 import ContactsLink from './ContactsLink/ContactsLink';
 import Form from '../../Components/Form/Form'
 function Contacts(props) {
-
     return (
         <div>
             <Title text="Контакты" />

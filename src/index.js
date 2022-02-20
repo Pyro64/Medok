@@ -3,19 +3,19 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import state, { medokMap, addEmail } from "../src/State/state"
+import store from "./Store/store"
+// import store from './Redux/Store'
+
 
 ReactDOM.render(
   <React.StrictMode>
     <App
-      addEmail={addEmail}
-      medokMap={medokMap}
-      state={state} />
+      addEmail={store.addEmail}
+      medokMap={store.getMedokMap()}
+      state={store.getState()} />
   </React.StrictMode>,
   document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
