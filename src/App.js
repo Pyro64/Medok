@@ -6,8 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import AboutProject from "./Components/AboutProject/AboutProject";
 import Benefit from "./Components/Benefit/Benefit";
-import Subscribe from "./Components/Subscribe/Subscribe";
+
 import Medic from "./Components/Medic/Medic";
+import SubscribeContainer from "./Components/Subscribe/SubscribeContainer";
 function App(props) {
    return (
       <BrowserRouter>
@@ -27,7 +28,7 @@ function App(props) {
                <Route path="/contacts"
                   element={<Contacts />} />
             </Routes>
-            <Subscribe addEmail={props.addEmail} />
+            <SubscribeContainer />
             <Footer />
          </div>
       </BrowserRouter>

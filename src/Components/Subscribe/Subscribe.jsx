@@ -2,13 +2,14 @@ import React from "react";
 import style from "./Subscribe.module.scss";
 
 function Subscribe(props) {
+    let SendMailClick = (e) => {
+        e.preventDefault();
+        props.sendMail();
+    }
 
-    let neWtextareaElement = React.createRef();
-
-    let addEmail = (e) => {
-        e.preventDefault()
-        let emailValue = neWtextareaElement.current.value
-        props.addEmail(emailValue)
+    let newMailChange = (e) => {
+        let emailValue = e.target.value;
+        props.updateNewMail(emailValue);
     }
     return (
         <div className={style.container}>
@@ -18,8 +19,8 @@ function Subscribe(props) {
                     о наших акциях и нововведениях</div>
             </div>
             <form className={style.form}>
-                <input type="email" placeholder="Введите email" ref={neWtextareaElement} />
-                <button className="btn" type="submit" onClick={addEmail}>Подписаться</button>
+                <input type="email" placeholder="Введите email" onChange={newMailChange} />
+                <button className="btn" type="submit" onClick={SendMailClick}>Подписаться</button>
             </form>
         </div>
     );

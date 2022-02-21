@@ -3,7 +3,8 @@ import ContactsItem from '../ContactsItem/ContactsItem';
 import style from "./ContactsLink.module.scss";
 
 export default function ContactsLink(props) {
-    let contactsItem = props.contactsData.map(link =>
+    let state = props.contacts
+    let contactsItem = state.contactsData.map(link =>
         <ContactsItem
             id={link.id}
             svg={link.svg}

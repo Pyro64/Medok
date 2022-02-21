@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContactsLink from "./ContactsLink/ContactsLink";
+import ContactsLink from "./ContactsLink";
 import { connect } from "react-redux";
 
 let mapStateToProps = (state) => {
@@ -13,6 +13,6 @@ let mapDispatchToProps = (dispatch) => {
 
     }
 }
-const ContactsContainer = connect(mapStateToProps, mapDispatchToProps)(ContactsLink);
+const ContactsLinkContainer = connect(mapStateToProps, mapDispatchToProps)(ContactsLink);
 
-export default ContactsContainer;
+export default ContactsLinkContainer;
