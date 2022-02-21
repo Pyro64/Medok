@@ -2,8 +2,8 @@ import style from './Doctor.module.scss';
 import DoctorItem from './DoctorItem/DoctorItem';
 
 function Doctor(props) {
-
-    let doctorElements = props.doctorData.map(doctor =>
+    let state = props.doctorPage;
+    let doctorElements = state.doctorData.map(doctor =>
         <DoctorItem
             id={doctor.id}
             img={doctor.img}

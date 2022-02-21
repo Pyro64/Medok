@@ -3,7 +3,9 @@ import style from './Blog.module.scss'
 import Blogitem from './BlogItem/BlogItem'
 
 export default function Blog(props) {
-    let blogElements = props.blogData.map(blog =>
+    let state = props.blogPage;
+
+    let blogElements = state.blogData.map(blog =>
         <Blogitem
             id={blog.id}
             img={blog.img}

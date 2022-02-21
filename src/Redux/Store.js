@@ -1,5 +1,18 @@
-// import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
+import blogReducer from "./blog-reducer";
+import contactsReducer from "./contacts-reducer";
+import doctorsReducer from "./doctor-reducer";
+import mapReducer from "./map-reducer";
+import subscribeReducer from "./subscribe-reducer";
 
-// let store = createStore();
+let reducers = combineReducers({
+    doctorPage: doctorsReducer,
+    blogPage: blogReducer,
+    customMap: mapReducer,
+    subscribe: subscribeReducer,
+    contacts: contactsReducer,
+});
 
-// export default store
+let store = createStore(reducers);
+
+export default store

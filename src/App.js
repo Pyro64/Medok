@@ -16,18 +16,16 @@ function App(props) {
             <Routes>
                <Route
                   path="/"
-                  element={<Home doctorData={props.state.doctorData} />}
+                  element={<Home />}
                />
                <Route path="/project"
                   element={<AboutProject />} />
                <Route path="/medic"
                   element={<Medic />} />
                <Route path="/benefit"
-                  element={<Benefit blogData={props.state.blogData} />} />
+                  element={<Benefit />} />
                <Route path="/contacts"
-                  element={<Contacts
-                     medokMap={props.medokMap}
-                     contactsData={props.state.contactsData} />} />
+                  element={<Contacts />} />
             </Routes>
             <Subscribe addEmail={props.addEmail} />
             <Footer />

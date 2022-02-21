@@ -3,16 +3,16 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import store from "./Store/store"
-// import store from './Redux/Store'
+// import store from "./Store/store"
+import store from './Redux/Store'
+import { Provider } from "react-redux";
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App
-      addEmail={store.addEmail.bind(store)}
-      medokMap={store.getMedokMap()}
-      state={store.getState()} />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
