@@ -6,7 +6,8 @@ let initialState = {
     subscribeData: [
         { id: 1, mail: 'test@mail.ru' },
     ],
-    newSubscribeMail: ""
+    newSubscribeMail: "",
+    placeholder: 'Введите e-mail'
 };
 
 const subscribeReducer = (state = initialState, action) => {
@@ -15,15 +16,14 @@ const subscribeReducer = (state = initialState, action) => {
             return {
                 ...state,
                 newSubscribeMail: action.emailValue,
-
             };
         case SEND_MAIL:
             let emailValue = state.newSubscribeMail;
-            console.log(state)
             return {
                 ...state,
-                subscribeData: [...state.subscribeData, { id: 2, mail: emailValue }]
-
+                subscribeData: [...state.subscribeData, { id: 2, mail: emailValue }],
+                newSubscribeMail: "",
+                placeholder: 'e-mail отправлен'
             }
         default:
             return state;

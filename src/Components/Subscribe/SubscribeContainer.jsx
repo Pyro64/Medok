@@ -5,7 +5,9 @@ import Subscribe from './Subscribe';
 
 let mapStateToProps = (state) => {
     return {
-        dialogsPage: state.dialogsPage
+        subscribe: state.subscribe,
+        newSubscribeMail: state.subscribe.newSubscribeMail,
+        placeholder: state.subscribe.placeholder
     }
 }
 let mapDispatchToProps = (dispatch) => {

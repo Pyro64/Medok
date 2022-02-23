@@ -15,11 +15,13 @@ export default function Blog(props) {
             name={blog.name}
             time={blog.time}
             read={blog.read}
+            key={blog.id}
         />
     )
     return (
         <div className={style.container}>
             {blogElements}
+            <button className='btn'>Показать еще</button>
         </div>
     )
 }

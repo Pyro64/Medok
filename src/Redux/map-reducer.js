@@ -9,13 +9,6 @@ let initialState = {
         ],
     },
 };
-// addEmail(emailValue) {
-//     let newEmail = {
-//         email: emailValue
-//     }
-//     this._state.emailData.push(newEmail)
-//     console.log(this._state.emailData)
-// }
 const mapReducer = (state = initialState, action) => {
     switch (action.type) {
         default:
