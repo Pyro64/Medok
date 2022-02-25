@@ -1,5 +1,4 @@
 import React from 'react';
-import Title from '../Title/Title';
 import DowloandApp from "../DowloandApp/DowloandApp";
 import DowloandBanner from '../../images/DowloandApp/medic-banner.png'
 import Banner from '../Banner/Banner';
