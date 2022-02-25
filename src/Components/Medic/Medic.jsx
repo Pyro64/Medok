@@ -5,6 +5,7 @@ import DowloandBanner from '../../images/DowloandApp/medic-banner.png'
 import Banner from '../Banner/Banner';
 import imgBanner from '../../images/Banner/home.jpg'
 import WhatisTelemedContainer from '../WhatIsTelemed/WhatIsTelemedContainer';
+import Description from '../Description/Description';
 const Medic = (props) => {
     return (
         <div>
@@ -13,6 +14,7 @@ const Medic = (props) => {
             Следите за их состоянием дистанционно и корректируйте назначенное лечение. Привлекайте новых пациентов, откликаясь на общие заявки. Что важно – делайте это официально и 
             за деньги. Как? Читаем дальше!" />
             <WhatisTelemedContainer page="medic" />
+            <Description />
             <DowloandApp
                 img={DowloandBanner}
                 text="текст мотивации для врачей"
