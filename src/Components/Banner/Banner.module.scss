@@ -16,23 +16,34 @@
   top: 0;
   z-index: -1;
 }
-.title {
-  color: $blue;
-  @include fluid(margin-bottom, 10px, 20px);
-  @include fluid(font-size, 14px, 20px);
+.cover {
+  object-fit: cover;
+  object-position: right;
 }
 
-.text {
-  color: #001430;
-  font-weight: bold;
-  @include fluid(font-size, 36px, 44px);
-  width: 50%;
-}
-
-.item {
+.container {
   @include container;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
+}
+.title {
+  color: #001430;
+  font-weight: bold;
+  width: 50%;
+  @include fluid(font-size, 36px, 44px);
+  @include fluid(margin-bottom, 10px, 20px);
+}
+
+.description {
+  color: $blue;
+  width: 50%;
+  @include fluid(font-size, 16px, 20px);
+  @include fluid(margin-bottom, 10px, 20px);
+}
+.text {
+  color: #333;
+  width: 50%;
+  @include fluid(font-size, 14px, 18px);
 }

@@ -4,6 +4,7 @@ import contactsReducer from "./contacts-reducer";
 import doctorsReducer from "./doctor-reducer";
 import mapReducer from "./map-reducer";
 import subscribeReducer from "./subscribe-reducer";
+import telemedReducer from "./telemed-reducer";
 
 let reducers = combineReducers({
     doctorPage: doctorsReducer,
@@ -11,6 +12,7 @@ let reducers = combineReducers({
     customMap: mapReducer,
     subscribe: subscribeReducer,
     contacts: contactsReducer,
+    whatIsTelemed: telemedReducer,
 });
 
 let store = createStore(reducers);

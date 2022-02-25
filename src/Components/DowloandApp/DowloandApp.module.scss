@@ -1,79 +1,40 @@
-@import "../../Style/Mixins.scss";
+@import '../../Style/Mixins.scss';
 
-.background {
-  background-image: url("../../images/Downloand.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.container {
-  @include container();
-  @include fluid(padding-top, 60px, 100px);
-  @include fluid(padding-bottom, 60px, 100px);
-
-  h2 {
-    color: #ffffff;
-    @include fluid(font-size, 30px, 40px);
-    @include fluid(line-height, 40px, 50px);
-    @include fluid(margin-bottom, 20px, 40px);
+.block {
+  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
 }
 
-.block {
-  display: flex;
-  justify-content: space-between;
+.container {
+  z-index: 1;
+  position: relative;
+  @include container();
+  @include fluid(padding-top, 100px, 200px);
+  @include fluid(padding-bottom, 100px, 200px);
 }
-
-.mobile {
-  object-fit: contain;
-  @include fluid(width, 180px, 289px);
-  @include fluid(height, 400px, 581px);
-  @include fluid(margin-top, -100px, -150px);
-}
-
 .item {
-  width: 30%;
-}
-
-.wrapper {
-  display: flex;
-
+  width: 50%;
+  h2 {
+    color: #ffffff;
+    @include fluid(font-size, 30px, 40px);
+    @include fluid(margin-bottom, 20px, 40px);
+  }
+  p {
+    color: #ffffff;
+    @include fluid(font-size, 14px, 18px);
+    @include fluid(margin-bottom, 15px, 30px);
+  }
   a {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    border-radius: 52px;
-    @include fluid(width, 150px, 210px);
-    @include fluid(height, 40px, 65px);
-    @include fluid(margin-right, 15px, 30px);
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    &:last-of-type {
-      margin-right: 0;
-    }
-
-    &::before {
-      background: #ffffff none repeat scroll 0 0;
-      border-radius: 52px;
-      content: "";
-      height: 100%;
-      left: 0;
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      transition: 0.38s ease 0s;
-      width: 0;
-    }
-
-    &:hover {
-      &::before {
-        width: 100%;
-      }
-    }
+    text-align: center;
+    width: 50%;
   }
 }

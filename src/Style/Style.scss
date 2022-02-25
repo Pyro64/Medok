@@ -23,7 +23,27 @@ a {
 li {
   list-style: none;
 }
-
+ul {
+  li {
+    @include fluid(padding-left, 20px, 40px);
+    font-weight: 700;
+    color: $black;
+    position: relative;
+    @include fluid(font-size, 14px, 16px);
+    @include fluid(margin-bottom, 10px, 15px);
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-image: url('../images/li.svg');
+      background-size: contain;
+      @include fluid(height, 10px, 20px);
+      @include fluid(width, 10px, 20px);
+    }
+  }
+}
 .fixed {
   display: flex;
   flex-direction: column;

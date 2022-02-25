@@ -12,18 +12,19 @@
     @include fluid(margin-bottom, 10px, 20px);
   }
   p {
-    color: $blue;
+    color: $black;
     @include fluid(font-size, 14px, 16px);
     @include fluid(line-height, 18px, 26px);
   }
 }
-.wrapper {
-  @include fluid(margin-bottom, 30px, 60px);
+.description {
+  @include fluid(margin-top, 30px, 60px);
 }
-.textCenter {
-  width: 50%;
-  text-align: center;
-  margin: auto;
+.wrapper {
+  @include fluid(margin-bottom, 15px, 30px);
+  p {
+    text-align: center;
+  }
 }
 .block {
   display: flex;
