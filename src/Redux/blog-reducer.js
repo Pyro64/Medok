@@ -104,8 +104,99 @@ let initialState = {
             time: "2 Days Ago",
             read: "44 read"
         },
+        {
+            id: 10,
+            img: blog1,
+            title: "Anxiety disorder affects human life very badly,very badly",
+            text: "There are many variations of passages of Lorem Ipsum available.There are many variations of passages of Lorem Ipsum available.There are many variations of passages of Lorem Ipsum available.There are many variations of passages of Lorem Ipsum available.",
+            avatar: avatar1,
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            read: "44 read"
+        },
+        {
+            id: 11,
+            img: blog2,
+            title: "Helping Children Deal With Trauma",
+            text: "There are many variations of passages of Lorem Ipsum available.There are many variations of passages of Lorem Ipsum available.",
+            avatar: avatar1,
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            read: "44 read"
+        },
+        {
+            id: 12,
+            img: blog3,
+            title: "One Lorem ipsum dolor sit amet, consectetu",
+            text: "There are many variations of passages of Lorem Ipsum available.There are",
+            avatar: avatar1,
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            read: "44 read"
+        },
+        {
+            id: 13,
+            img: blog4,
+            title: "A shadowy flight into the dangerous world",
+            text: "There are many variations of passages of Lorem Ipsum available. There are many variations of passages of Lorem Ipsum available.",
+            avatar: avatar1,
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            read: "44 read"
+        },
+        {
+            id: 14,
+            img: blog5,
+            title: "Ultra nanoparticles kill cancer cells in unusual way",
+            text: "There are many variations of passages of Lorem Ipsum available.There are many variations of passages of Lorem Ipsum available.There are many variations of passages of Lorem Ipsum available.",
+            avatar: avatar1,
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            read: "44 read"
+        },
+        {
+            id: 15,
+            img: blog6,
+            title: "Eye lens regeneration from own stem cells",
+            text: "There are many variations of passages of Lorem Ipsum.",
+            avatar: avatar1,
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            read: "44 read"
+        },
+        {
+            id: 16,
+            img: blog7,
+            title: "Believe it or not its just me Come and listen",
+            text: "There are many variations of passages of Lorem Ipsum available.",
+            avatar: avatar1,
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            read: "44 read"
+        },
+        {
+            id: 17,
+            img: blog8,
+            title: "Patient Forum School Patient Experience",
+            text: "There are many variations of passages of Lorem Ipsum available.There are many variations",
+            avatar: avatar1,
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            read: "44 read"
+        },
+        {
+            id: 18,
+            img: blog9,
+            title: "Washington Medical Science of Institute",
+            text: "There are many variations of passages of Lorem Ipsum available. There are many variations of passages of Lorem Ipsum available.",
+            avatar: avatar1,
+            name: "Processing Ltd.",
+            time: "2 Days Ago",
+            read: "44 read"
+        },
     ],
     pageSize: 6,
+    step: 3,
     isFull: false,
 }
 const blogReducer = (state = initialState, action) => {
@@ -125,6 +216,6 @@ const blogReducer = (state = initialState, action) => {
     }
 }
 export const isFullCreator = () => ({ type: IS_FULL })
-export const addPageCreator = (value) => ({ type: ADD_PAGE, value: value })
+export const addPageCreator = (value) => ({ type: ADD_PAGE, value })
 
 export default blogReducer;

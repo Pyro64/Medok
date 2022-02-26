@@ -4,8 +4,10 @@ import Blogitem from './BlogItem/BlogItem'
 
 export default function Blog(props) {
     let state = props.blogPage;
+    let step = state.step;
     let pageSize = state.pageSize;
     let isFull = state.isFull;
+
     let blogElements = state.blogData.map(blog =>
         <Blogitem
             id={blog.id}
@@ -19,9 +21,10 @@ export default function Blog(props) {
             key={blog.id}
         />
     )
+
     let page = blogElements.slice(0, pageSize)
     let addPage = () => {
-        let value = pageSize + pageSize;
+        let value = pageSize + step;
         props.addPage(value)
         if (value >= blogElements.length) {
             props.isFull();

@@ -7,6 +7,7 @@ import { addPageCreator, isFullCreator } from '../../Redux/blog-reducer';
 let mapStateToProps = (state) => {
     return {
         blogPage: state.blogPage,
+        step: state.step,
         pageSize: state.pageSize,
     }
 }
