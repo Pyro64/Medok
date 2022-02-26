@@ -20,7 +20,7 @@ export default function Blog(props) {
             read={blog.read}
             key={blog.id}
         />
-    )
+    ).reverse()
 
     let page = blogElements.slice(0, pageSize)
     let addPage = () => {
