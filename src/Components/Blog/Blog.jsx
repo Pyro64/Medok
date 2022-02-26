@@ -4,7 +4,8 @@ import Blogitem from './BlogItem/BlogItem'
 
 export default function Blog(props) {
     let state = props.blogPage;
-
+    let pageSize = state.pageSize;
+    let isFull = state.isFull;
     let blogElements = state.blogData.map(blog =>
         <Blogitem
             id={blog.id}
@@ -18,10 +19,27 @@ export default function Blog(props) {
             key={blog.id}
         />
     )
+    let page = blogElements.slice(0, pageSize)
+    let addPage = () => {
+        let value = pageSize + pageSize;
+        props.addPage(value)
+        if (value >= blogElements.length) {
+            props.isFull();
+        }
+    }
+    function ShowMore(props) {
+        if (props.isFull) {
+            return null
+        } else {
+            return <button className='btn' onClick={addPage}>Показать еще</button>
+        }
+    }
     return (
         <div className={style.container}>
-            {blogElements}
-            <button className='btn'>Показать еще</button>
+            <div className={style.block}>
+                {page}
+            </div>
+            <ShowMore isFull={isFull} />
         </div>
     )
 }

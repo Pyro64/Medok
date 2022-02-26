@@ -9,6 +9,8 @@ import blog8 from "../images/Blog/8.png"
 import blog9 from "../images/Blog/9.png"
 
 import avatar1 from "../images/Avatar/1.png"
+const ADD_PAGE = 'ADD_PAGE';
+const IS_FULL = 'IS_FULL';
 
 let initialState = {
     blogData: [
@@ -102,16 +104,27 @@ let initialState = {
             time: "2 Days Ago",
             read: "44 read"
         },
-
     ],
-};
-
+    pageSize: 6,
+    isFull: false,
+}
 const blogReducer = (state = initialState, action) => {
     switch (action.type) {
+        case ADD_PAGE:
+            return {
+                ...state,
+                pageSize: action.value,
+            };
+        case IS_FULL:
+            return {
+                ...state,
+                isFull: true,
+            };
         default:
             return state;
     }
 }
-
+export const isFullCreator = () => ({ type: IS_FULL })
+export const addPageCreator = (value) => ({ type: ADD_PAGE, value: value })
 
 export default blogReducer;
