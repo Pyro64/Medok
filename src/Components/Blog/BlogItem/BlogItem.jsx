@@ -18,7 +18,7 @@ const Blogitem = (props) => {
                 </div>
                 <div className={style.wrapper}>
                     <div className={style.time}>{props.time}</div>
-                    <div className={style.read}>{props.read}</div>
+                    <div className={style.read}>{props.id}</div>
                 </div>
             </div>
         </div>
