@@ -1,5 +1,5 @@
-import React from 'react';
-import { sendMailCreator, updateNewMailCreator } from "../../Redux/subscribe-reducer";
+
+import { sendMail, updateNewMail } from "../../Redux/subscribe-reducer";
 import { connect } from "react-redux";
 import Subscribe from './Subscribe';
 
@@ -10,17 +10,8 @@ let mapStateToProps = (state) => {
         placeholder: state.subscribe.placeholder
     }
 }
-let mapDispatchToProps = (dispatch) => {
-    return {
-        sendMail: () => {
-            dispatch(sendMailCreator())
-        },
-        updateNewMail: (emailValue) => {
-            dispatch(updateNewMailCreator(emailValue));
-        }
-    }
-}
 
-const SubscribeContainer = connect(mapStateToProps, mapDispatchToProps)(Subscribe);
+
+const SubscribeContainer = connect(mapStateToProps, { sendMail, updateNewMail })(Subscribe);
 
 export default SubscribeContainer;

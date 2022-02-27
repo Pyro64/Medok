@@ -6,7 +6,7 @@ function Nav() {
 
         <NavItem href="/project" name='О проекте' />
         <NavItem href="/medic" name='Врачам' />
-        <NavItem href="/benefit" name='Чем полезно' />
+        <NavItem href="/blog" name='Чем полезно' />
         <NavItem href="/contacts" name='Контакты' />
     </nav>);
 }

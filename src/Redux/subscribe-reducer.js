@@ -31,8 +31,8 @@ const subscribeReducer = (state = initialState, action) => {
 
 }
 
-export const sendMailCreator = () => ({ type: SEND_MAIL })
-export const updateNewMailCreator = (emailValue) =>
+export const sendMail = () => ({ type: SEND_MAIL })
+export const updateNewMail = (emailValue) =>
     ({ type: UPDATE_NEW_MAIL, emailValue: emailValue })
 
 export default subscribeReducer;

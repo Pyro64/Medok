@@ -215,7 +215,7 @@ const blogReducer = (state = initialState, action) => {
             return state;
     }
 }
-export const isFullCreator = () => ({ type: IS_FULL })
-export const addPageCreator = (value) => ({ type: ADD_PAGE, value })
+export const isFull = () => ({ type: IS_FULL })
+export const addPage = (value) => ({ type: ADD_PAGE, value })
 
 export default blogReducer;

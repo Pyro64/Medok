@@ -1,8 +1,7 @@
-import React from 'react';
 
 import Blog from "./Blog";
 import { connect } from "react-redux";
-import { addPageCreator, isFullCreator } from '../../Redux/blog-reducer';
+import { addPage, isFull } from '../../Redux/blog-reducer';
 
 let mapStateToProps = (state) => {
     return {
@@ -11,16 +10,7 @@ let mapStateToProps = (state) => {
         pageSize: state.pageSize,
     }
 }
-let mapDispatchToProps = (dispatch) => {
-    return {
-        addPage: (value) => {
-            dispatch(addPageCreator(value))
-        },
-        isFull: () => {
-            dispatch(isFullCreator())
-        },
-    }
-}
-const DoctorContainer = connect(mapStateToProps, mapDispatchToProps)(Blog);
+
+const DoctorContainer = connect(mapStateToProps, { addPage, isFull })(Blog);
 
 export default DoctorContainer;

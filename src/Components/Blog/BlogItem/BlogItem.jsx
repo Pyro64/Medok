@@ -1,13 +1,14 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import style from "./BlogItem.module.scss";
 
 const Blogitem = (props) => {
     return (
         <div className={style.container}>
             <div className={style.block}>
-                <a href="#" className={style.link}>
+                <NavLink to={'/blog/' + props.id} className={style.link}>
                     <img src={props.img} alt="" className={style.img} />
-                </a>
+                </NavLink>
                 <h2>{props.title}</h2>
                 <p> {props.text}</p>
             </div>
