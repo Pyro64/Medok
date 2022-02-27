@@ -34,8 +34,10 @@
   width: 30%;
 }
 .svg {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
-  @include fluid(margin-bottom, 15px, 25px);
+  fill: $orange;
+  filter: invert(52%) sepia(13%) saturate(5231%) hue-rotate(324deg) brightness(102%) contrast(101%);
+  @include fluid(margin-bottom, 10px, 15px);
 }
