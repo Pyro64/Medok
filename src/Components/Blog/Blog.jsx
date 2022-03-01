@@ -21,9 +21,8 @@ export default function Blog(props) {
             key={blog.id}
         />
     ).reverse()
-
     let page = blogElements.slice(0, pageSize)
-    let addPage = () => {
+    let showMore = () => {
         let value = pageSize + step;
         props.addPage(value)
         if (value >= blogElements.length) {
@@ -34,7 +33,7 @@ export default function Blog(props) {
         if (props.isFull) {
             return null
         } else {
-            return <button className='btn' onClick={addPage}>Показать еще</button>
+            return <button className='btn' onClick={showMore}>Показать еще</button>
         }
     }
     return (
