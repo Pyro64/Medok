@@ -198,7 +198,7 @@ let initialState = {
     pageSize: 6,
     step: 3,
     isFull: false,
-}
+};
 const blogReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_PAGE:

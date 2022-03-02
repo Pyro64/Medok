@@ -71,6 +71,8 @@ textarea:focus::-webkit-input-placeholder {
 }
 .btn {
   display: block;
+  position: relative;
+  z-index: 1;
   border-radius: 30px;
   color: #fff;
   transition: 0.38s ease-in-out;

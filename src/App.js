@@ -8,7 +8,7 @@ import AboutProject from "./Components/AboutProject/AboutProject";
 import Benefit from "./Components/Benefit/Benefit";
 
 import Medic from "./Components/Medic/Medic";
-import SubscribeContainer from "./Components/Subscribe/SubscribeContainer";
+import Subscribe from "./Components/Subscribe/Subscribe";
 function App(props) {
    return (
       <BrowserRouter>
@@ -28,7 +28,7 @@ function App(props) {
                <Route path="/contacts"
                   element={<Contacts />} />
             </Routes>
-            <SubscribeContainer />
+            <Subscribe />
             <Footer />
          </div>
       </BrowserRouter>

@@ -1,18 +1,22 @@
 import React from "react";
+import { Field, reduxForm } from "redux-form";
+import { email, required } from "../Utils/validators";
 import style from "./Subscribe.module.scss";
-import SubscribeItem from "./SubscribeItem";
+import Input from "../Input/Input";
 
 function Subscribe(props) {
-    let SendMailClick = (e) => {
-        e.preventDefault();
-        props.sendMail();
+    const SubscribeForm = (props) => {
+        return (
+            <form className={style.form} onSubmit={props.handleSubmit}>
+                <Field component={Input} className={style.input} name='email' placeholder={props.placeholder} validate={[required, email]} />
+                <button className="btn">Подписаться</button>
+            </form>
+        )
     }
-
-    let newMailChange = (e) => {
-        let emailValue = e.target.value;
-        props.updateNewMail(emailValue);
+    const SubscribeReduxForm = reduxForm({ form: 'subscribe' })(SubscribeForm);
+    const onSubmit = (formData) => {
+        console.log(formData)
     }
-
     return (
         <div className={style.container}>
             <div className={style.block}>
@@ -21,10 +25,7 @@ function Subscribe(props) {
                     <div className={style.subtitle}>И узнавать первым о новых специалистах,
                         о наших акциях и нововведениях</div>
                 </div>
-                <form className={style.form}>
-                    <input type="email" placeholder={props.placeholder} value={props.newSubscribeMail} onChange={newMailChange} />
-                    <button className="btn" type="submit" onClick={SendMailClick}>Подписаться</button>
-                </form>
+                <SubscribeReduxForm onSubmit={onSubmit} />
             </div>
         </div>
 

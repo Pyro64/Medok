@@ -1,0 +1,18 @@
+@import '../../Style/Style.scss';
+
+.wrapper {
+    width: 50%;
+    position: relative;
+    @include fluid(margin-bottom, 15px, 20px);
+    flex-grow: 1;
+}
+.inputError {
+    border-color: $orange !important;
+    box-shadow: 0 3px 3px 0 $orange !important;
+}
+
+.error {
+    position: absolute;
+    top: 0;
+    color: $orange;
+}
