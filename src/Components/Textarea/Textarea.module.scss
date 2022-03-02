@@ -16,7 +16,6 @@ textarea {
     resize: none;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid $yellow;
-    box-shadow: 0 3px 3px 0 $yellow;
     @include fluid(font-size, 14px, 16px);
     @include fluid(padding-top, 10px, 15px);
     @include fluid(padding-bottom, 10px, 15px);
@@ -25,8 +24,7 @@ textarea {
     @include fluid(margin-top, 20px, 20px);
 }
 .textareaError {
-    border-color: $orange !important;
-    box-shadow: 0 3px 3px 0 $orange !important;
+    border-color: $orange;
 }
 .error {
     position: absolute;

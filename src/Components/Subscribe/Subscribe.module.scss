@@ -28,20 +28,8 @@
     width: 40%;
     input {
         width: 90%;
-        font-family: 'Montserrat';
-        display: block;
         border-radius: 30px;
-        transition: 0.38s ease-in-out;
-        background-size: 300% 100%;
-        outline: none;
-        transition: 0.38s ease-in-out;
-        border: 1px solid $yellow;
-        box-shadow: 0 3px 3px 0 $yellow;
-        @include fluid(font-size, 14px, 16px);
-        @include fluid(padding-top, 10px, 20px);
-        @include fluid(padding-bottom, 10px, 20px);
-        @include fluid(padding-left, 20px, 40px);
-        @include fluid(padding-right, 20px, 40px);
-        @include fluid(margin-top, 20px, 20px);
+        border: none;
+        box-shadow: 0 4px 15px 0 $yellow;
     }
 }

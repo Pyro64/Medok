@@ -6,13 +6,21 @@
     @include fluid(margin-bottom, 15px, 20px);
     flex-grow: 1;
 }
-.inputError {
-    border-color: $orange !important;
-    box-shadow: 0 3px 3px 0 $orange !important;
-}
-
 .error {
     position: absolute;
     top: 0;
     color: $orange;
+}
+
+.input {
+    font-family: 'Montserrat';
+    transition: 0.38s ease-in-out;
+    display: block;
+    outline: none;
+    @include fluid(font-size, 14px, 16px);
+    @include fluid(margin-top, 20px, 20px);
+    @include fluid(padding-top, 10px, 15px);
+    @include fluid(padding-bottom, 10px, 15px);
+    @include fluid(padding-left, 20px, 40px);
+    @include fluid(padding-right, 20px, 40px);
 }
